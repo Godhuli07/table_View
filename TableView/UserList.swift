@@ -6,7 +6,24 @@
 //
 
 import Foundation
-struct UserList : Codable {
+
+struct UserList : Decodable {
+    
+    var id : Int
     var name: String
     var username : String
+    var email : String
+    var phone : String
+    var website : String
+    var address : AddressType
+    
+    
 }
+
+struct AddressType : Decodable {
+    var street : String
+    var city : String
+    var zipcode : String
+}
+
+        

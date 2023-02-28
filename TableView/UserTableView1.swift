@@ -13,10 +13,12 @@ class UserTableView1: UIViewController {
     
     @IBOutlet weak var myTableView: UITableView!
     
+    
     override func viewDidLoad() {
+                
         super.viewDidLoad()
+        self.myTableView.tableFooterView = UIView()
         fetchData()
-
     }
      
         func fetchData() {
@@ -33,14 +35,12 @@ class UserTableView1: UIViewController {
             var cList = [UserList]()
             
             do {
-                
                 cList = try JSONDecoder().decode([UserList].self, from: data)
-                
-            }
+                self.userInfo = cList            }
             catch {
                 print("Error occured while decoding json into script struct\(error)")
             }
-            self.userInfo = cList
+            
             DispatchQueue.main.async {
                 self.myTableView.reloadData()
             }
@@ -55,13 +55,22 @@ extension UserTableView1: UITableViewDelegate, UITableViewDataSource {
         return userInfo.count
     }
     
+   
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = myTableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = "\(indexPath.row+1).\(userInfo[indexPath.row].name)"
-        cell.detailTextLabel?.text = "\(userInfo[indexPath.row].username)"
-        return cell
+      let cell : TableViewCell = myTableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TableViewCell
+      cell.nameList.text = "\(indexPath.row+1).\(userInfo[indexPath.row].name)"
+      cell.usernameList.text = "\(userInfo[indexPath.row].username)"
+      return cell
+     
+      }
+        
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "UserDetailView") as? UserDetailView
+        vc?.content = userInfo[indexPath.row]
+        navigationController?.pushViewController(vc!, animated: true)
         
     }
     
+
+}
     
-    }
