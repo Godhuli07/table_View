@@ -16,15 +16,20 @@ class UserDetailView: UIViewController {
     @IBOutlet weak var firstView: UIView!
     @IBOutlet weak var secondView: UIView!
     
-  
+    var delegate: idDelegate?
+    
     
     
     var content:UserList = UserList(id: 0, name: "", username: "", email: "", phone: "", website: "", address: AddressType(street: "", city: "", zipcode: "String"))
         
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         firstView.alpha = 1
         secondView.alpha = 0
+        
+        let ids = content.id
+        delegate?.idPassed(ids)
         
         detailsName.text = "Name  : \(content.name)"
         detailsEmail.text = "Email  : \(content.email)"

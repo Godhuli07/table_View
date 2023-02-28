@@ -25,5 +25,3 @@ struct AddressType : Decodable {
     var city : String
     var zipcode : String
 }
-
-        
