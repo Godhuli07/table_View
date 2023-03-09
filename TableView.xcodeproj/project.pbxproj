@@ -17,12 +17,11 @@
 		1D87742629A3432D0077C1DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D87742529A3432D0077C1DF /* Assets.xcassets */; };
 		1D87742929A3432D0077C1DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D87742729A3432D0077C1DF /* LaunchScreen.storyboard */; };
 		1D87744529A38D0B0077C1DF /* UserList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D87744429A38D0B0077C1DF /* UserList.swift */; };
-		1DA27B5229AC8AEA00ACA669 /* UserTodoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA27B5129AC8AEA00ACA669 /* UserTodoView.swift */; };
-		1DA27B5529AC8B0D00ACA669 /* UserPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA27B5429AC8B0D00ACA669 /* UserPostView.swift */; };
 		1DA27B5929AC8C8700ACA669 /* TodoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA27B5829AC8C8700ACA669 /* TodoList.swift */; };
 		1DA27B5D29AC8EC100ACA669 /* PostList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA27B5C29AC8EC100ACA669 /* PostList.swift */; };
 		1DA27B6029AC95E000ACA669 /* TodoListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA27B5F29AC95E000ACA669 /* TodoListCell.swift */; };
-		1DA27B6529AC99F200ACA669 /* PostListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA27B6429AC99F200ACA669 /* PostListCell.swift */; };
+		8D61142429AF344400A8FCF7 /* mySingletonClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D61142329AF344400A8FCF7 /* mySingletonClass.swift */; };
+		8DB4B50529B22AE40001E774 /* UserDetails2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB4B50429B22AE40001E774 /* UserDetails2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,12 +37,12 @@
 		1D87742829A3432D0077C1DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1D87742A29A3432D0077C1DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1D87744429A38D0B0077C1DF /* UserList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserList.swift; sourceTree = "<group>"; };
-		1DA27B5129AC8AEA00ACA669 /* UserTodoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTodoView.swift; sourceTree = "<group>"; };
-		1DA27B5429AC8B0D00ACA669 /* UserPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPostView.swift; sourceTree = "<group>"; };
 		1DA27B5829AC8C8700ACA669 /* TodoList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoList.swift; sourceTree = "<group>"; };
 		1DA27B5C29AC8EC100ACA669 /* PostList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostList.swift; sourceTree = "<group>"; };
 		1DA27B5F29AC95E000ACA669 /* TodoListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListCell.swift; sourceTree = "<group>"; };
-		1DA27B6429AC99F200ACA669 /* PostListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListCell.swift; sourceTree = "<group>"; };
+		8D61142329AF344400A8FCF7 /* mySingletonClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mySingletonClass.swift; sourceTree = "<group>"; };
+		8DB4B50029B22AC30001E774 /* TableView-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TableView-Bridging-Header.h"; sourceTree = "<group>"; };
+		8DB4B50429B22AE40001E774 /* UserDetails2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetails2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,18 +80,18 @@
 				1D87741E29A3432D0077C1DF /* SceneDelegate.swift */,
 				1D87742029A3432D0077C1DF /* ViewController.swift */,
 				1D0F267629A4971B005E7C81 /* UserTableView1.swift */,
+				1D0F268129A4CA97005E7C81 /* UserDetailView.swift */,
+				8DB4B50429B22AE40001E774 /* UserDetails2.swift */,
 				1D0F267E29A4979E005E7C81 /* TableViewCell.swift */,
 				1DA27B5F29AC95E000ACA669 /* TodoListCell.swift */,
-				1DA27B6429AC99F200ACA669 /* PostListCell.swift */,
 				1D87744429A38D0B0077C1DF /* UserList.swift */,
 				1DA27B5829AC8C8700ACA669 /* TodoList.swift */,
 				1DA27B5C29AC8EC100ACA669 /* PostList.swift */,
-				1DA27B5129AC8AEA00ACA669 /* UserTodoView.swift */,
-				1D0F268129A4CA97005E7C81 /* UserDetailView.swift */,
-				1DA27B5429AC8B0D00ACA669 /* UserPostView.swift */,
+				8D61142329AF344400A8FCF7 /* mySingletonClass.swift */,
 				1D87742529A3432D0077C1DF /* Assets.xcassets */,
 				1D87742729A3432D0077C1DF /* LaunchScreen.storyboard */,
 				1D87742A29A3432D0077C1DF /* Info.plist */,
+				8DB4B50029B22AC30001E774 /* TableView-Bridging-Header.h */,
 			);
 			path = TableView;
 			sourceTree = "<group>";
@@ -128,6 +127,7 @@
 				TargetAttributes = {
 					1D87741829A3432D0077C1DF = {
 						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1420;
 					};
 				};
 			};
@@ -168,16 +168,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D0F267729A4971B005E7C81 /* UserTableView1.swift in Sources */,
-				1DA27B5529AC8B0D00ACA669 /* UserPostView.swift in Sources */,
 				1DA27B5D29AC8EC100ACA669 /* PostList.swift in Sources */,
 				1D87744529A38D0B0077C1DF /* UserList.swift in Sources */,
 				1D87742129A3432D0077C1DF /* ViewController.swift in Sources */,
 				1D0F267F29A4979E005E7C81 /* TableViewCell.swift in Sources */,
 				1DA27B5929AC8C8700ACA669 /* TodoList.swift in Sources */,
 				1DA27B6029AC95E000ACA669 /* TodoListCell.swift in Sources */,
+				8D61142429AF344400A8FCF7 /* mySingletonClass.swift in Sources */,
+				8DB4B50529B22AE40001E774 /* UserDetails2.swift in Sources */,
 				1D0F268229A4CA97005E7C81 /* UserDetailView.swift in Sources */,
-				1DA27B5229AC8AEA00ACA669 /* UserTodoView.swift in Sources */,
-				1DA27B6529AC99F200ACA669 /* PostListCell.swift in Sources */,
 				1D87741D29A3432D0077C1DF /* AppDelegate.swift in Sources */,
 				1D87741F29A3432D0077C1DF /* SceneDelegate.swift in Sources */,
 			);
@@ -326,6 +325,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = TableView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -334,6 +334,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.yuri.TableView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TableView/TableView-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -344,6 +346,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = TableView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -352,6 +355,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.yuri.TableView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TableView/TableView-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

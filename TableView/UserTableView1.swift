@@ -36,7 +36,9 @@ class UserTableView1: UIViewController {
             
             do {
                 cList = try JSONDecoder().decode([UserList].self, from: data)
-                self.userInfo = cList            }
+                self.userInfo = cList
+                
+            }
             catch {
                 print("Error occured while decoding json into script struct\(error)")
             }
@@ -67,6 +69,7 @@ extension UserTableView1: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = storyboard?.instantiateViewController(withIdentifier: "UserDetailView") as? UserDetailView
         vc?.content = userInfo[indexPath.row]
+        TakeId.instance.ids = indexPath.row + 1
         navigationController?.pushViewController(vc!, animated: true)
         
     }
