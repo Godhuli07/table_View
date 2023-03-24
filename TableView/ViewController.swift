@@ -13,13 +13,14 @@ class ViewController: UITableViewController {
     
     @IBOutlet weak var txtPassword: UITextField!
     
+   
     let Login = "USERLOGGEDIN"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       //self.txtEmail.text = "godhulisarkar@gmail.com"
-      // self.txtPassword.text = "Godhuli12!!"
+       self.txtEmail.text = "godhulisarkar@gmail.com"
+       self.txtPassword.text = "Godhuli12!!"
         
         if UserDefaults.standard.bool(forKey: Login) == true {
             

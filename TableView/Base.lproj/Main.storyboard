@@ -233,7 +233,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="address" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="627-5C-Eav">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="--------------------------------------------" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="627-5C-Eav">
                                 <rect key="frame" x="20" y="168.66666666666666" width="335" height="20.333333333333343"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -375,23 +375,14 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qmD-uV-KPU">
                                 <rect key="frame" x="0.0" y="91" width="375" height="687"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WKO-ph-7jj">
-                                        <rect key="frame" x="20" y="15.999999999999998" width="335" height="20.333333333333329"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="todo or post" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KhS-LF-BPQ">
-                                        <rect key="frame" x="20" y="44" width="335" height="42"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="42" id="Pks-Dr-Ewh"/>
-                                        </constraints>
+                                        <rect key="frame" x="20" y="9.9999999999999982" width="335" height="20.333333333333329"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="status" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PYq-ji-GTb">
-                                        <rect key="frame" x="20" y="94" width="335" height="20.333333333333329"/>
+                                        <rect key="frame" x="20" y="40.333333333333343" width="335" height="20.333333333333329"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -399,15 +390,12 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.99994486569999996" green="0.9874873757" blue="0.93591302629999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstItem="KhS-LF-BPQ" firstAttribute="top" secondItem="WKO-ph-7jj" secondAttribute="bottom" constant="7.6699999999999999" id="1VM-Mc-Syw"/>
-                                    <constraint firstItem="PYq-ji-GTb" firstAttribute="leading" secondItem="qmD-uV-KPU" secondAttribute="leading" constant="20" symbolic="YES" id="3TR-Qg-ZpL"/>
-                                    <constraint firstAttribute="trailing" secondItem="PYq-ji-GTb" secondAttribute="trailing" constant="20" symbolic="YES" id="Aph-KC-iBv"/>
-                                    <constraint firstItem="PYq-ji-GTb" firstAttribute="top" secondItem="KhS-LF-BPQ" secondAttribute="bottom" constant="8" symbolic="YES" id="DFt-dP-vgN"/>
-                                    <constraint firstItem="WKO-ph-7jj" firstAttribute="leading" secondItem="qmD-uV-KPU" secondAttribute="leading" constant="20" symbolic="YES" id="Gui-FY-1nQ"/>
-                                    <constraint firstAttribute="trailing" secondItem="KhS-LF-BPQ" secondAttribute="trailing" constant="20" symbolic="YES" id="Qy2-o0-uOb"/>
-                                    <constraint firstItem="KhS-LF-BPQ" firstAttribute="leading" secondItem="qmD-uV-KPU" secondAttribute="leading" constant="20" symbolic="YES" id="SMv-8S-aOe"/>
-                                    <constraint firstAttribute="trailing" secondItem="WKO-ph-7jj" secondAttribute="trailing" constant="20" symbolic="YES" id="hj1-UK-05D"/>
-                                    <constraint firstItem="WKO-ph-7jj" firstAttribute="top" secondItem="qmD-uV-KPU" secondAttribute="top" constant="16" id="ifg-7o-U0f"/>
+                                    <constraint firstItem="PYq-ji-GTb" firstAttribute="leading" secondItem="qmD-uV-KPU" secondAttribute="leading" constant="20" symbolic="YES" id="Zk6-zV-8qS"/>
+                                    <constraint firstItem="KhS-LF-BPQ" firstAttribute="leading" secondItem="qmD-uV-KPU" secondAttribute="leading" constant="20" symbolic="YES" id="eje-tz-4qd"/>
+                                    <constraint firstItem="PYq-ji-GTb" firstAttribute="top" secondItem="KhS-LF-BPQ" secondAttribute="bottom" constant="10" id="flA-JV-6YM"/>
+                                    <constraint firstItem="KhS-LF-BPQ" firstAttribute="top" secondItem="qmD-uV-KPU" secondAttribute="top" constant="10" id="iGJ-33-uJ6"/>
+                                    <constraint firstAttribute="trailing" secondItem="PYq-ji-GTb" secondAttribute="trailing" constant="20" symbolic="YES" id="x0b-7e-2NS"/>
+                                    <constraint firstAttribute="trailing" secondItem="KhS-LF-BPQ" secondAttribute="trailing" constant="20" symbolic="YES" id="ziR-dx-sQh"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -422,14 +410,13 @@
                     </view>
                     <navigationItem key="navigationItem" title="Todo / Post" id="oWM-kZ-gLf"/>
                     <connections>
-                        <outlet property="displayName" destination="WKO-ph-7jj" id="YgT-pt-ndN"/>
                         <outlet property="displayStatus" destination="PYq-ji-GTb" id="IJN-OF-M7X"/>
                         <outlet property="displayTodoOrPost" destination="KhS-LF-BPQ" id="nMv-bY-tRZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cxJ-h5-nBG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1880" y="-97.393364928909946"/>
+            <point key="canvasLocation" x="1879.2" y="-97.536945812807886"/>
         </scene>
     </scenes>
     <resources>

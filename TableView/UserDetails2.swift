@@ -9,26 +9,25 @@ import UIKit
 
 class UserDetails2: UIViewController {
     
-    @IBOutlet weak var displayName: UILabel!
     @IBOutlet weak var displayTodoOrPost: UILabel!
     @IBOutlet weak var displayStatus: UILabel!
     
+    var todoTitle = ""
+    var todoStatus = ""
+    var postTitle = ""
+    var postBody = ""
     
-    var displayDetails:TodoList = TodoList(userId: 0, id: 0, title: "", completed: true)
-    var displayDetails2:PostList = PostList(userId: 0, id: 0, title: "", body: "")
-    var istodo:Bool = false
+    var istodo:Bool = true
     override func viewDidLoad() {
         super.viewDidLoad()
         if istodo == true {
-            displayName.text = "User Id : \(displayDetails.userId)"
-            displayTodoOrPost.text = "Todo : \(displayDetails.title)"
-            displayStatus.text = "Status : \(displayDetails.completed)"
+            displayTodoOrPost.text = "Title   : \(todoTitle)"
+            displayStatus.text = "Status    :\(todoStatus)"
         }
         else
         {
-            displayName.text = "User Id : \(displayDetails2.userId)"
-            displayTodoOrPost.text = "Post : \(displayDetails2.title)"
-            displayStatus.text = "Body : \(displayDetails2.body)"
+            displayTodoOrPost.text = "Title   : \(postTitle)"
+            displayStatus.text = "Status    :\(postBody)"
         }
         
     }
