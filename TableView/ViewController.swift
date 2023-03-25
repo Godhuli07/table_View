@@ -10,19 +10,15 @@ import UIKit
 class ViewController: UITableViewController {
     
     @IBOutlet weak var txtEmail: UITextField!
-    
     @IBOutlet weak var txtPassword: UITextField!
-    
     let Login = "USERLOGGEDIN"
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-       //self.txtEmail.text = "godhulisarkar@gmail.com"
-      // self.txtPassword.text = "Godhuli12!!"
+       self.txtEmail.text = "godhulisarkar@gmail.com"
+       self.txtPassword.text = "Godhuli12!!"
         
         if UserDefaults.standard.bool(forKey: Login) == true {
-            
             let signIn = self.storyboard?.instantiateViewController(withIdentifier: "UserTableView1") as! UserTableView1
             self.navigationController?.pushViewController(signIn, animated: true)
         }

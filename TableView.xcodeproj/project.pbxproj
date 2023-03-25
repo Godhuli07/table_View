@@ -21,7 +21,16 @@
 		1DA27B5D29AC8EC100ACA669 /* PostList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA27B5C29AC8EC100ACA669 /* PostList.swift */; };
 		1DA27B6029AC95E000ACA669 /* TodoListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA27B5F29AC95E000ACA669 /* TodoListCell.swift */; };
 		8D61142429AF344400A8FCF7 /* mySingletonClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D61142329AF344400A8FCF7 /* mySingletonClass.swift */; };
+		8D7CE05229C1F90E00476B5A /* TableView.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8D7CE05029C1F90E00476B5A /* TableView.xcdatamodeld */; };
 		8DB4B50529B22AE40001E774 /* UserDetails2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB4B50429B22AE40001E774 /* UserDetails2.swift */; };
+		8DF1F1AF29C33525005D08D8 /* TodoListEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF1F1A729C33525005D08D8 /* TodoListEntity+CoreDataClass.swift */; };
+		8DF1F1B029C33525005D08D8 /* TodoListEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF1F1A829C33525005D08D8 /* TodoListEntity+CoreDataProperties.swift */; };
+		8DF1F1B129C33525005D08D8 /* PostListEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF1F1A929C33525005D08D8 /* PostListEntity+CoreDataClass.swift */; };
+		8DF1F1B229C33525005D08D8 /* PostListEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF1F1AA29C33525005D08D8 /* PostListEntity+CoreDataProperties.swift */; };
+		8DF1F1B329C33525005D08D8 /* UserListEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF1F1AB29C33525005D08D8 /* UserListEntity+CoreDataClass.swift */; };
+		8DF1F1B429C33525005D08D8 /* UserListEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF1F1AC29C33525005D08D8 /* UserListEntity+CoreDataProperties.swift */; };
+		8DF1F1B529C33525005D08D8 /* AddressEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF1F1AD29C33525005D08D8 /* AddressEntity+CoreDataClass.swift */; };
+		8DF1F1B629C33525005D08D8 /* AddressEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF1F1AE29C33525005D08D8 /* AddressEntity+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,8 +50,17 @@
 		1DA27B5C29AC8EC100ACA669 /* PostList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostList.swift; sourceTree = "<group>"; };
 		1DA27B5F29AC95E000ACA669 /* TodoListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListCell.swift; sourceTree = "<group>"; };
 		8D61142329AF344400A8FCF7 /* mySingletonClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mySingletonClass.swift; sourceTree = "<group>"; };
+		8D7CE05129C1F90E00476B5A /* TableView.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TableView.xcdatamodel; sourceTree = "<group>"; };
 		8DB4B50029B22AC30001E774 /* TableView-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TableView-Bridging-Header.h"; sourceTree = "<group>"; };
 		8DB4B50429B22AE40001E774 /* UserDetails2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetails2.swift; sourceTree = "<group>"; };
+		8DF1F1A729C33525005D08D8 /* TodoListEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TodoListEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		8DF1F1A829C33525005D08D8 /* TodoListEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TodoListEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		8DF1F1A929C33525005D08D8 /* PostListEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PostListEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		8DF1F1AA29C33525005D08D8 /* PostListEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PostListEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		8DF1F1AB29C33525005D08D8 /* UserListEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserListEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		8DF1F1AC29C33525005D08D8 /* UserListEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserListEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		8DF1F1AD29C33525005D08D8 /* AddressEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AddressEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		8DF1F1AE29C33525005D08D8 /* AddressEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AddressEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +77,14 @@
 		1D87741029A3432D0077C1DF = {
 			isa = PBXGroup;
 			children = (
+				8DF1F1A729C33525005D08D8 /* TodoListEntity+CoreDataClass.swift */,
+				8DF1F1A829C33525005D08D8 /* TodoListEntity+CoreDataProperties.swift */,
+				8DF1F1A929C33525005D08D8 /* PostListEntity+CoreDataClass.swift */,
+				8DF1F1AA29C33525005D08D8 /* PostListEntity+CoreDataProperties.swift */,
+				8DF1F1AB29C33525005D08D8 /* UserListEntity+CoreDataClass.swift */,
+				8DF1F1AC29C33525005D08D8 /* UserListEntity+CoreDataProperties.swift */,
+				8DF1F1AD29C33525005D08D8 /* AddressEntity+CoreDataClass.swift */,
+				8DF1F1AE29C33525005D08D8 /* AddressEntity+CoreDataProperties.swift */,
 				1D87741B29A3432D0077C1DF /* TableView */,
 				1D87741A29A3432D0077C1DF /* Products */,
 			);
@@ -92,6 +118,7 @@
 				1D87742729A3432D0077C1DF /* LaunchScreen.storyboard */,
 				1D87742A29A3432D0077C1DF /* Info.plist */,
 				8DB4B50029B22AC30001E774 /* TableView-Bridging-Header.h */,
+				8D7CE05029C1F90E00476B5A /* TableView.xcdatamodeld */,
 			);
 			path = TableView;
 			sourceTree = "<group>";
@@ -167,8 +194,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DF1F1B129C33525005D08D8 /* PostListEntity+CoreDataClass.swift in Sources */,
+				8D7CE05229C1F90E00476B5A /* TableView.xcdatamodeld in Sources */,
 				1D0F267729A4971B005E7C81 /* UserTableView1.swift in Sources */,
+				8DF1F1B329C33525005D08D8 /* UserListEntity+CoreDataClass.swift in Sources */,
 				1DA27B5D29AC8EC100ACA669 /* PostList.swift in Sources */,
+				8DF1F1B529C33525005D08D8 /* AddressEntity+CoreDataClass.swift in Sources */,
 				1D87744529A38D0B0077C1DF /* UserList.swift in Sources */,
 				1D87742129A3432D0077C1DF /* ViewController.swift in Sources */,
 				1D0F267F29A4979E005E7C81 /* TableViewCell.swift in Sources */,
@@ -176,9 +207,14 @@
 				1DA27B6029AC95E000ACA669 /* TodoListCell.swift in Sources */,
 				8D61142429AF344400A8FCF7 /* mySingletonClass.swift in Sources */,
 				8DB4B50529B22AE40001E774 /* UserDetails2.swift in Sources */,
+				8DF1F1B629C33525005D08D8 /* AddressEntity+CoreDataProperties.swift in Sources */,
+				8DF1F1AF29C33525005D08D8 /* TodoListEntity+CoreDataClass.swift in Sources */,
 				1D0F268229A4CA97005E7C81 /* UserDetailView.swift in Sources */,
+				8DF1F1B429C33525005D08D8 /* UserListEntity+CoreDataProperties.swift in Sources */,
+				8DF1F1B029C33525005D08D8 /* TodoListEntity+CoreDataProperties.swift in Sources */,
 				1D87741D29A3432D0077C1DF /* AppDelegate.swift in Sources */,
 				1D87741F29A3432D0077C1DF /* SceneDelegate.swift in Sources */,
+				8DF1F1B229C33525005D08D8 /* PostListEntity+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -383,6 +419,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		8D7CE05029C1F90E00476B5A /* TableView.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				8D7CE05129C1F90E00476B5A /* TableView.xcdatamodel */,
+			);
+			currentVersion = 8D7CE05129C1F90E00476B5A /* TableView.xcdatamodel */;
+			path = TableView.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 1D87741129A3432D0077C1DF /* Project object */;
 }
