@@ -20,9 +20,8 @@ class UserDetailView: UIViewController {
     @IBOutlet weak var detailsAddress: UILabel!
     @IBOutlet weak var detailsPhone: UILabel!
     @IBOutlet weak var detailsWebsite: UILabel!
+    @IBOutlet weak var tpTableView: UITableView!
     
-    var todoData = [TodoList]()
-    var postData = [PostList]()
     var tList = [TodoList]()
     var pList = [PostList]()
     var todoItem:[TodoListEntity] = []
@@ -31,11 +30,7 @@ class UserDetailView: UIViewController {
     
     var anyItem:[Any] = []
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    
-    
-    
-    @IBOutlet weak var tpTableView: UITableView!
-    
+ 
     var taskEnum: TaskEnum = .todo
     var d_name = ""
     var d_email = ""
@@ -45,32 +40,37 @@ class UserDetailView: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //fetchDataTodoPost()
-        fetchTodoApi()
-        fetchPostApi()
-        detailsName.text = "Name       :  \(d_name)"
-        detailsEmail.text = "Email      : \(d_email)"
-        detailsPhone.text = "Phone No.  : \(d_phone)"
-        detailsWebsite.text = "Website    : \(d_website)"
+        self.tpTableView.tableFooterView = UIView()
+        DispatchQueue.main.async {
+            self.fetchTodoApi { isSuccess, data in
+                if isSuccess {
+                    self.fetchDataTodoPost()
+                }
+            }
+            self.fetchPostApi { isSuccess, data in
+                if isSuccess {
+                    self.fetchDataTodoPost()
+                }
+            }
+        }
+        detailsName.text = d_name
+        detailsEmail.text = "📩 : \(d_email)"
+        detailsPhone.text = "📞 : \(d_phone)"
+        detailsWebsite.text = d_website
         
-        //detailsAddress.text = "Address    :   \(content.address.city), \(content.address.street)\n\t\t\t Zip - \(content.address.zipcode)"
     }
     @IBAction func switchViews(_sender: UISegmentedControl) {
-        
-        
         if _sender.selectedSegmentIndex == 0 {
             self.taskEnum = .todo
             fetchDataTodoPost()
-            
         }
         else {
             self.taskEnum = .post
             fetchDataTodoPost()
-            
         }
-        
     }
-    func fetchTodoApi() {
+    func fetchTodoApi(completion : @escaping((Bool,[TodoListEntity])-> Void)) {
+        var parsedTodoData : [TodoListEntity] = []
         let url = URL(string: "https://jsonplaceholder.typicode.com/todos")
         let  tasks = URLSession.shared.dataTask(with: url!, completionHandler: {
             (data,response,error) -> Void in guard let data = data , error == nil
@@ -97,6 +97,7 @@ class UserDetailView: UIViewController {
                         todoEntity.title = todoLoop.title
                         todoEntity.userId = Int64(todoLoop.userId)
                         todoEntity.completed = todoLoop.completed
+                        parsedTodoData.append(todoEntity)
                     }
                     else {
                         let todoEntity = TodoListEntity(context: self.context)
@@ -105,15 +106,15 @@ class UserDetailView: UIViewController {
                         todoEntity.userId = Int64(todoLoop.userId)
                         todoEntity.completed = todoLoop.completed
                         self.todoItem.append(todoEntity)
+                        parsedTodoData.append(todoEntity)
                     }
-                    
                 }
                 try self.context.save()
-                print("data saved in db")
+                completion(true, parsedTodoData)
+                print("todo data saved in db")
                 DispatchQueue.main.async {
                     self.tpTableView.reloadData()
                 }
-                
             }
             catch {
                 print("Error occured while decoding json into script struct\(error)")
@@ -121,7 +122,8 @@ class UserDetailView: UIViewController {
         })
         tasks.resume()
     }
-    func fetchPostApi() {
+    func fetchPostApi(completion : @escaping((Bool, [PostListEntity])-> Void)) {
+        var parsedPostData : [PostListEntity] = []
         let url = URL(string: "https://jsonplaceholder.typicode.com/posts")
         let  tasks = URLSession.shared.dataTask(with: url!, completionHandler: {
             (data,response,error) -> Void in guard let data = data , error == nil
@@ -148,6 +150,7 @@ class UserDetailView: UIViewController {
                         PostEntity.title = postLoop.title
                         PostEntity.userId = Int64(postLoop.userId)
                         PostEntity.body = postLoop.body
+                        parsedPostData.append(PostEntity)
                     }
                     else {
                         let PostEntity = PostListEntity(context: self.context)
@@ -155,71 +158,45 @@ class UserDetailView: UIViewController {
                         PostEntity.title = postLoop.title
                         PostEntity.userId = Int64(postLoop.userId)
                         PostEntity.body = postLoop.body
-                        self.postItem.append(PostEntity)
+                        parsedPostData.append(PostEntity)
                     }
-                    
                 }
                 try self.context.save()
+                completion(true, parsedPostData)
                 print("data saved in db")
+                
                 DispatchQueue.main.async {
                     self.tpTableView.reloadData()
                 }
-                
             }
             catch {
                 print("Error occured while decoding json into script struct\(error)")
             }
         })
         tasks.resume()
-//        let url = URL(string: "https://jsonplaceholder.typicode.com/posts")
-//        let tasks = URLSession.shared.dataTask(with: url! , completionHandler : { (data, response, error) in
-//            guard let data = data , error == nil else {
-//                print("Error Occured while Accessing Data with url")
-//                return
-//            }
-//            guard let posts = try? JSONDecoder().decode([PostList].self, from: data)
-//            else {
-//                print("couldnt decode")
-//                return
-//            }
-//            let post = posts.filter{$0.userId == self.d_userId}
-//
-//            for postLoop in posts {
-//                let postEntity = PostListEntity(context: self.context)
-//                postEntity.id = Int64(postLoop.id)
-//                postEntity.userId = Int64(postLoop.userId)
-//                postEntity.title = postLoop.title
-//                postEntity.body = postLoop.body
-//            }
-//            print(post.count)
-//            do {
-//                try self.context.save()
-//                print("data saved in db")
-//            }
-//            catch {
-//                print("error")
-//            }
-//        })
-//        tasks.resume()
     }
-    
     func fetchDataTodoPost() {
         switch taskEnum {
         case .todo:
-
                 let request = NSFetchRequest<TodoListEntity>(entityName: "TodoListEntity")
                 request.predicate = NSPredicate(format: "userId = %@", "\(self.d_userId)")
                 let sortDescriptor = NSSortDescriptor(key: "id", ascending: true)
                 request.sortDescriptors = [sortDescriptor]
                 do {
                     todoItem = try context.fetch(request)
-                    print(self.todoItem.count)
-                    self.tpTableView.reloadData()
+                    if todoItem.isEmpty {
+                        
+                    }
+                    else {
+                        DispatchQueue.main.async {
+                            self.tpTableView.reloadData()
+                        }
+                    }
+                    
                 }
                 catch {
                     print("error")
                 }
-
         case .post:
             let request = NSFetchRequest<PostListEntity>(entityName: "PostListEntity")
             request.predicate = NSPredicate(format: "userId = %@", "\(self.d_userId)")
@@ -227,19 +204,22 @@ class UserDetailView: UIViewController {
             request.sortDescriptors = [sortDescriptor]
             do {
                 postItem = try context.fetch(request)
-                print(self.postItem.count)
-                self.tpTableView.reloadData()
+                if postItem.isEmpty {
+                    
+                }
+                else {
+                    DispatchQueue.main.async {
+                        self.tpTableView.reloadData()
+                    }
+                }
+                
             }
             catch {
                 print("error")
             }
-
         }
     }
-}
-                                                    
-        
-       
+}    
 extension UserDetailView: UITableViewDelegate, UITableViewDataSource {
     
     
