@@ -21,6 +21,7 @@ class UserTableView1: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.myTableView.tableFooterView = UIView()
+<<<<<<< HEAD
         DispatchQueue.main.async {
             self.fetchData { isSuccess, data in
                 if isSuccess{
@@ -49,10 +50,37 @@ class UserTableView1: UIViewController {
         catch {
             print("error fetching")
         }
+=======
+//        fetchUsers()
+        fetchData()
+>>>>>>> 03eb5c10e1b0a70ef837d209253544a4b497cac8
+    }
+    
+    func fetchUsers() {
+        let request: NSFetchRequest<UserListEntity> = UserListEntity.fetchRequest()
+//        let sortDescriptor = NSSortDescriptor(key: "id", ascending: true)
+//        request.sortDescriptors = [sortDescriptor]
+        do {
+            self.items = try context.fetch(request)
+            if items.isEmpty {
+                fetchData()
+            }
+            else {
+                self.myTableView.reloadData()
+            }
+        }
+        catch {
+            print("error fetching")
+        }
     }
      
+<<<<<<< HEAD
     func fetchData(completion : @escaping((Bool,[UserListEntity])-> Void)) {
         var parsedData : [UserListEntity] = []
+=======
+    func fetchData() {
+        
+>>>>>>> 03eb5c10e1b0a70ef837d209253544a4b497cac8
         let url = URL(string : "https://jsonplaceholder.typicode.com/users")
         let  dataTask = URLSession.shared.dataTask(with: url!, completionHandler: {
             (data,response,error) -> Void in guard let data = data , error == nil
@@ -76,8 +104,11 @@ class UserTableView1: UIViewController {
                         //user.address = dictionary["address"] as? String
                         user.website = dictionary["website"] as? String
                         user.phone = dictionary["phone"] as? String
+<<<<<<< HEAD
                         parsedData.append(user)
                         
+=======
+>>>>>>> 03eb5c10e1b0a70ef837d209253544a4b497cac8
                     }
                     else {
                         let user = UserListEntity(context: self.context)
@@ -88,14 +119,21 @@ class UserTableView1: UIViewController {
                         user.phone = dictionary["phone"] as? String
                        // user.address = dictionary["address"] as? String
                         user.website = dictionary["website"] as? String
+<<<<<<< HEAD
                         parsedData.append(user)
+=======
+//                        self.items.append(user)
+>>>>>>> 03eb5c10e1b0a70ef837d209253544a4b497cac8
                     }
                 }
                 //cList = try JSONDecoder().decode([UserList].self, from: data)
                 //self.userInfo = cList
                 //Saving data
                 try? self.context.save()
+<<<<<<< HEAD
                 completion(true, parsedData)
+=======
+>>>>>>> 03eb5c10e1b0a70ef837d209253544a4b497cac8
                 print("data saved")
                 DispatchQueue.main.async {
                     self.myTableView.reloadData()
@@ -132,7 +170,10 @@ extension UserTableView1: UITableViewDelegate, UITableViewDataSource {
         detail.d_name = user.name!
         detail.d_email = user.email!
         detail.d_phone = user.phone!
+<<<<<<< HEAD
         
+=======
+>>>>>>> 03eb5c10e1b0a70ef837d209253544a4b497cac8
         detail.d_website = user.website!
         detail.d_userId = user.id
         self.navigationController?.pushViewController(detail, animated: true)

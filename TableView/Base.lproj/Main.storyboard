@@ -218,6 +218,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YE8-dI-sLJ">
+<<<<<<< HEAD
                                 <rect key="frame" x="0.0" y="91" width="428" height="801"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Screenshot 2023-03-27 at 4.15.51 PM" translatesAutoresizingMaskIntoConstraints="NO" id="mG7-ik-msB">
@@ -379,6 +380,63 @@
                                         </segments>
                                         <color key="tintColor" red="1" green="0.9201743298032854" blue="0.90679056668876423" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="selectedSegmentTintColor" red="1" green="0.89806579231843087" blue="0.92302227049560714" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+=======
+                                <rect key="frame" x="0.0" y="91" width="375" height="687"/>
+                                <color key="backgroundColor" red="1" green="0.98431372549999996" blue="0.92156862750000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lCS-fi-mSn">
+                                <rect key="frame" x="20" y="108" width="335" height="20.333333333333343"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="email" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uf4-O1-QLT">
+                                <rect key="frame" x="20" y="138.33333333333334" width="335" height="20.333333333333343"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="--------------------------------------------" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="627-5C-Eav">
+                                <rect key="frame" x="20" y="168.66666666666666" width="335" height="20.333333333333343"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="phone" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SoJ-nA-f4y">
+                                <rect key="frame" x="20" y="199" width="335" height="20.333333333333343"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="QFy-3q-9hF">
+                                <rect key="frame" x="0.0" y="298.66666666666674" width="375" height="479.33333333333326"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="TodoListCell" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="todoCell" textLabel="WPy-tD-lvh" detailTextLabel="yUe-nb-xeO" style="IBUITableViewCellStyleSubtitle" id="4CE-d5-3GJ" customClass="TodoListCell" customModule="TableView" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="375" height="58.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4CE-d5-3GJ" id="g9r-7N-Mbt">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="58.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="todo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="WPy-tD-lvh">
+                                                    <rect key="frame" x="20" y="7.9999999999999982" width="35" height="20.333333333333332"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="status" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="yUe-nb-xeO">
+                                                    <rect key="frame" x="20.000000000000004" y="31.333333333333329" width="42.333333333333336" height="18"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+>>>>>>> 03eb5c10e1b0a70ef837d209253544a4b497cac8
                                         <connections>
                                             <action selector="switchViewsWith_sender:" destination="Z8e-pd-Chd" eventType="valueChanged" id="SID-UO-I20"/>
                                         </connections>
@@ -738,6 +796,7 @@
                                 <rect key="frame" x="0.0" y="91" width="428" height="801"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="todo or post" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KhS-LF-BPQ">
+<<<<<<< HEAD
                                         <rect key="frame" x="22" y="40" width="383" height="18.666666666666671"/>
                                         <color key="backgroundColor" white="1" alpha="0.66372539191846025" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="15"/>
@@ -762,12 +821,23 @@
                                         <rect key="frame" x="22" y="96" width="383" height="21.333333333333329"/>
                                         <color key="backgroundColor" white="1" alpha="0.7586135358999897" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="17"/>
+=======
+                                        <rect key="frame" x="20" y="9.9999999999999982" width="335" height="20.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="status" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PYq-ji-GTb">
+                                        <rect key="frame" x="20" y="40.333333333333343" width="335" height="20.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+>>>>>>> 03eb5c10e1b0a70ef837d209253544a4b497cac8
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.97318178420000001" blue="0.96190208200000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
+<<<<<<< HEAD
                                     <constraint firstItem="PYq-ji-GTb" firstAttribute="top" secondItem="nrI-HC-Nue" secondAttribute="bottom" constant="8" symbolic="YES" id="1wS-ax-Lhs"/>
                                     <constraint firstItem="nrI-HC-Nue" firstAttribute="top" secondItem="KhS-LF-BPQ" secondAttribute="bottom" constant="7.3300000000000001" id="38W-yM-u2j"/>
                                     <constraint firstItem="KhS-LF-BPQ" firstAttribute="top" secondItem="Bb8-Fv-W5m" secondAttribute="bottom" constant="8" symbolic="YES" id="4qo-v3-JOj"/>
@@ -780,6 +850,14 @@
                                     <constraint firstItem="PYq-ji-GTb" firstAttribute="leading" secondItem="qmD-uV-KPU" secondAttribute="leading" constant="22" id="jvy-bc-it3"/>
                                     <constraint firstAttribute="trailing" secondItem="nrI-HC-Nue" secondAttribute="trailing" constant="10" id="sTx-jW-utc"/>
                                     <constraint firstItem="Bb8-Fv-W5m" firstAttribute="leading" secondItem="qmD-uV-KPU" secondAttribute="leading" constant="10" id="xrC-xa-gQ9"/>
+=======
+                                    <constraint firstItem="PYq-ji-GTb" firstAttribute="leading" secondItem="qmD-uV-KPU" secondAttribute="leading" constant="20" symbolic="YES" id="Zk6-zV-8qS"/>
+                                    <constraint firstItem="KhS-LF-BPQ" firstAttribute="leading" secondItem="qmD-uV-KPU" secondAttribute="leading" constant="20" symbolic="YES" id="eje-tz-4qd"/>
+                                    <constraint firstItem="PYq-ji-GTb" firstAttribute="top" secondItem="KhS-LF-BPQ" secondAttribute="bottom" constant="10" id="flA-JV-6YM"/>
+                                    <constraint firstItem="KhS-LF-BPQ" firstAttribute="top" secondItem="qmD-uV-KPU" secondAttribute="top" constant="10" id="iGJ-33-uJ6"/>
+                                    <constraint firstAttribute="trailing" secondItem="PYq-ji-GTb" secondAttribute="trailing" constant="20" symbolic="YES" id="x0b-7e-2NS"/>
+                                    <constraint firstAttribute="trailing" secondItem="KhS-LF-BPQ" secondAttribute="trailing" constant="20" symbolic="YES" id="ziR-dx-sQh"/>
+>>>>>>> 03eb5c10e1b0a70ef837d209253544a4b497cac8
                                 </constraints>
                             </view>
                         </subviews>
@@ -794,7 +872,10 @@
                     </view>
                     <navigationItem key="navigationItem" title="Todo / Post" id="oWM-kZ-gLf"/>
                     <connections>
+<<<<<<< HEAD
                         <outlet property="displayBody" destination="nrI-HC-Nue" id="oek-8j-18v"/>
+=======
+>>>>>>> 03eb5c10e1b0a70ef837d209253544a4b497cac8
                         <outlet property="displayStatus" destination="PYq-ji-GTb" id="IJN-OF-M7X"/>
                         <outlet property="displayTodoOrPost" destination="KhS-LF-BPQ" id="nMv-bY-tRZ"/>
                     </connections>
