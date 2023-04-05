@@ -12,19 +12,12 @@ class ViewController: UITableViewController {
     
     @IBOutlet weak var txtEmail: UITextField!
     @IBOutlet weak var txtPassword: UITextField!
-<<<<<<< HEAD
-    
-   
-=======
->>>>>>> 03eb5c10e1b0a70ef837d209253544a4b497cac8
+
     let Login = "USERLOGGEDIN"
     
     override func viewDidLoad() {
         super.viewDidLoad()
-<<<<<<< HEAD
-        
-=======
->>>>>>> 03eb5c10e1b0a70ef837d209253544a4b497cac8
+
        self.txtEmail.text = "godhulisarkar@gmail.com"
        self.txtPassword.text = "Godhuli12!!"
         

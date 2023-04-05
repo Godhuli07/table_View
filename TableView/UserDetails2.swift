@@ -22,25 +22,14 @@ class UserDetails2: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         if istodo == true {
-<<<<<<< HEAD
-            displayBody.text = "Status"
-            displayTodoOrPost.text = todoTitle
-            displayStatus.text = todoStatus
-        }
-        else
-        {
-            displayBody.text = "Body"
-            displayTodoOrPost.text = postTitle
-            displayStatus.text = postBody
-=======
+            
             displayTodoOrPost.text = "Title   : \(todoTitle)"
             displayStatus.text = "Status    :\(todoStatus)"
         }
         else
         {
             displayTodoOrPost.text = "Title   : \(postTitle)"
-            displayStatus.text = "Status    :\(postBody)"
->>>>>>> 03eb5c10e1b0a70ef837d209253544a4b497cac8
+            displayStatus.text = "Body    :\(postBody)"
         }
         
     }
