@@ -277,7 +277,7 @@
                                                 <include reference="ofo-1M-4hd"/>
                                             </mask>
                                         </variation>
-                                        <variation key="heightClass=regular-widthClass=regular" image="62303982-40F4-4F6D-81E3-A81175507B30"/>
+                                        <variation key="heightClass=regular-widthClass=regular" image="10C3623E-ED5C-4F09-97EB-75EA0A798865"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lCS-fi-mSn">
                                         <rect key="frame" x="8" y="198" width="412" height="31.666666666666657"/>
@@ -737,14 +737,30 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qmD-uV-KPU">
                                 <rect key="frame" x="0.0" y="91" width="428" height="801"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="todo or post" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KhS-LF-BPQ">
-                                        <rect key="frame" x="20" y="9.9999999999999982" width="388" height="20.333333333333329"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="displayTodoOrPost" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KhS-LF-BPQ">
+                                        <rect key="frame" x="8" y="34" width="412" height="20.333333333333329"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="status" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PYq-ji-GTb">
-                                        <rect key="frame" x="20" y="40.333333333333343" width="388" height="20.333333333333329"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="statusHeader" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ks0-te-CeJ">
+                                        <rect key="frame" x="8" y="62.33333333333335" width="412" height="20.333333333333336"/>
+                                        <color key="backgroundColor" red="0.84603041410000002" green="0.82232147460000005" blue="0.91200703380000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TodoOrPostHeader" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FYd-c9-Jlx">
+                                        <rect key="frame" x="8" y="8" width="412" height="21"/>
+                                        <color key="backgroundColor" red="0.84603041410000002" green="0.82232147460000005" blue="0.91200703380000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="displayStatus" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PYq-ji-GTb">
+                                        <rect key="frame" x="8" y="87.666666666666657" width="412" height="20.333333333333329"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -752,12 +768,18 @@
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.97318178420000001" blue="0.96190208200000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstItem="PYq-ji-GTb" firstAttribute="leading" secondItem="qmD-uV-KPU" secondAttribute="leading" constant="20" symbolic="YES" id="Zk6-zV-8qS"/>
-                                    <constraint firstItem="KhS-LF-BPQ" firstAttribute="leading" secondItem="qmD-uV-KPU" secondAttribute="leading" constant="20" symbolic="YES" id="eje-tz-4qd"/>
-                                    <constraint firstItem="PYq-ji-GTb" firstAttribute="top" secondItem="KhS-LF-BPQ" secondAttribute="bottom" constant="10" id="flA-JV-6YM"/>
-                                    <constraint firstItem="KhS-LF-BPQ" firstAttribute="top" secondItem="qmD-uV-KPU" secondAttribute="top" constant="10" id="iGJ-33-uJ6"/>
-                                    <constraint firstAttribute="trailing" secondItem="PYq-ji-GTb" secondAttribute="trailing" constant="20" symbolic="YES" id="x0b-7e-2NS"/>
-                                    <constraint firstAttribute="trailing" secondItem="KhS-LF-BPQ" secondAttribute="trailing" constant="20" symbolic="YES" id="ziR-dx-sQh"/>
+                                    <constraint firstItem="PYq-ji-GTb" firstAttribute="leading" secondItem="qmD-uV-KPU" secondAttribute="leading" constant="8" id="0Xv-bP-Dwj"/>
+                                    <constraint firstItem="FYd-c9-Jlx" firstAttribute="top" secondItem="qmD-uV-KPU" secondAttribute="top" constant="8" id="9Sf-aM-vEn"/>
+                                    <constraint firstAttribute="trailing" secondItem="ks0-te-CeJ" secondAttribute="trailing" constant="8" id="A6v-Hq-wgB"/>
+                                    <constraint firstAttribute="trailing" secondItem="KhS-LF-BPQ" secondAttribute="trailing" constant="8" id="GLS-PX-OjT"/>
+                                    <constraint firstItem="KhS-LF-BPQ" firstAttribute="leading" secondItem="qmD-uV-KPU" secondAttribute="leading" constant="8" id="OcI-Bh-1Qz"/>
+                                    <constraint firstItem="KhS-LF-BPQ" firstAttribute="top" secondItem="FYd-c9-Jlx" secondAttribute="bottom" constant="5" id="arQ-2c-vzG"/>
+                                    <constraint firstItem="ks0-te-CeJ" firstAttribute="top" secondItem="KhS-LF-BPQ" secondAttribute="bottom" constant="8" id="dMl-yg-5YC"/>
+                                    <constraint firstItem="FYd-c9-Jlx" firstAttribute="leading" secondItem="qmD-uV-KPU" secondAttribute="leading" constant="8" id="h0R-0f-oeu"/>
+                                    <constraint firstAttribute="trailing" secondItem="PYq-ji-GTb" secondAttribute="trailing" constant="8" id="kbe-MU-elE"/>
+                                    <constraint firstItem="ks0-te-CeJ" firstAttribute="leading" secondItem="qmD-uV-KPU" secondAttribute="leading" constant="8" id="ouu-UL-hlI"/>
+                                    <constraint firstAttribute="trailing" secondItem="FYd-c9-Jlx" secondAttribute="trailing" constant="8" id="qkW-pD-PK6"/>
+                                    <constraint firstItem="PYq-ji-GTb" firstAttribute="top" secondItem="ks0-te-CeJ" secondAttribute="bottom" constant="5" id="z3K-6n-qex"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -772,18 +794,19 @@
                     </view>
                     <navigationItem key="navigationItem" title="Todo / Post" id="oWM-kZ-gLf"/>
                     <connections>
+                        <outlet property="TodoOrPostHeader" destination="FYd-c9-Jlx" id="Gos-aO-1Dr"/>
                         <outlet property="displayStatus" destination="PYq-ji-GTb" id="IJN-OF-M7X"/>
                         <outlet property="displayTodoOrPost" destination="KhS-LF-BPQ" id="nMv-bY-tRZ"/>
+                        <outlet property="statusHeader" destination="ks0-te-CeJ" id="KMT-w9-LTr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cxJ-h5-nBG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1879.2" y="-97.536945812807886"/>
+            <point key="canvasLocation" x="1878.5046728971961" y="-97.840172786177106"/>
         </scene>
     </scenes>
     <resources>
-        <image name="4128349" width="512" height="512"/>
-        <image name="62303982-40F4-4F6D-81E3-A81175507B30" width="512" height="512">
+        <image name="10C3623E-ED5C-4F09-97EB-75EA0A798865" width="512" height="512">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGBwpYJHZlcnNpb25ZJGFyY2hpdmVyVCR0b3BYJG9iamVjdHMSAAGGoF8QD05T
 S2V5ZWRBcmNoaXZlctEICVRyb290gAGvECULDBkaJBQpLzA3Oj9JSktRUlZXXGFlZmtxcnd6e4CDhIeQ
@@ -1487,6 +1510,7 @@ dZB9kIqQn5CkkKiQqpCskK6Qt5C/kMGQw5DFkMeiZ6JsonSid6J8ooQAAAAAAAACAQAAAAAAAACdAAAA
 AAAAAAAAAAAAAACihw
 </mutableData>
         </image>
+        <image name="4128349" width="512" height="512"/>
         <image name="Screenshot 2023-03-27 at 4.15.51 PM" width="346" height="115"/>
         <image name="imageView:D2d-92-UKf:image" width="512" height="512">
             <mutableData key="keyedArchiveRepresentation">

@@ -11,7 +11,9 @@ class UserDetails2: UIViewController {
     
     @IBOutlet weak var displayTodoOrPost: UILabel!
     @IBOutlet weak var displayStatus: UILabel!
-    @IBOutlet weak var displayBody: UILabel!
+    @IBOutlet weak var TodoOrPostHeader: UILabel!
+    @IBOutlet weak var statusHeader: UILabel!
+    
     
     var todoTitle = ""
     var todoStatus = ""
@@ -22,12 +24,15 @@ class UserDetails2: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         if istodo == true {
-            
-            displayTodoOrPost.text = "Title   : \(todoTitle)"
-            displayStatus.text = "Status    :\(todoStatus)"
+            TodoOrPostHeader.text = "Todo :"
+            statusHeader.text = "Status :"
+            displayTodoOrPost.text = todoTitle
+            displayStatus.text = todoStatus
         }
         else
         {
+            TodoOrPostHeader.text = "Post :"
+            statusHeader.text = "Body :"
             displayTodoOrPost.text = "Title   : \(postTitle)"
             displayStatus.text = "Body    :\(postBody)"
         }
