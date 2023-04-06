@@ -8,6 +8,9 @@
 import UIKit
 import CoreData
 
+protocol UserTappedDelegate {
+    func userTapped(id: Int)-> [UserListEntity]
+}
 
 enum TaskEnum: Int16 {
     case todo = 0
@@ -21,13 +24,13 @@ class UserDetailView: UIViewController {
     @IBOutlet weak var detailsPhone: UILabel!
     @IBOutlet weak var detailsWebsite: UILabel!
     @IBOutlet weak var tpTableView: UITableView!
-    
+    var delegate: UserTappedDelegate?
     var tList = [TodoList]()
     var pList = [PostList]()
     var todoItem:[TodoListEntity] = []
     var postItem:[PostListEntity] = []
     var str:String = ""
-    
+    var user : [UserListEntity] = []
     var anyItem:[Any] = []
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
  
@@ -40,6 +43,7 @@ class UserDetailView: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.user = self.delegate?.userTapped(id: Int(self.d_userId)) ?? []
         self.tpTableView.tableFooterView = UIView()
         DispatchQueue.main.async {
             self.fetchTodoApi { isSuccess, data in
@@ -53,10 +57,10 @@ class UserDetailView: UIViewController {
                 }
             }
         }
-        detailsName.text = d_name
-        detailsEmail.text = "📩 : \(d_email)"
-        detailsPhone.text = "📞 : \(d_phone)"
-        detailsWebsite.text = d_website
+        detailsName.text = user[0].name
+        detailsEmail.text = "📩 : \(user[0].email ?? "")"
+        detailsPhone.text = "📞 : \(user[0].phone ?? "")"
+        detailsWebsite.text = user[0].website
         
     }
     @IBAction func switchViews(_sender: UISegmentedControl) {
@@ -166,14 +170,12 @@ class UserDetailView: UIViewController {
                 }
                 try self.context.save()
                 completion(true, parsedPostData)
-                print("data saved in db")
+                print("post data saved in db")
                 
                 DispatchQueue.main.async {
                     self.tpTableView.reloadData()
                 }
-     
-                    
-                }
+            }
           
             catch {
                 print("Error occured while decoding json into script struct\(error)")
@@ -181,40 +183,6 @@ class UserDetailView: UIViewController {
         })
         tasks.resume()
     }
-//    func fetchDataTodoPost() {
-//        switch taskEnum {
-//        case .todo:
-////        let url = URL(string: "https://jsonplaceholder.typicode.com/posts")
-////        let tasks = URLSession.shared.dataTask(with: url! , completionHandler : { (data, response, error) in
-////            guard let data = data , error == nil else {
-////                print("Error Occured while Accessing Data with url")
-////                return
-////            }
-////            guard let posts = try? JSONDecoder().decode([PostList].self, from: data)
-////            else {
-////                print("couldnt decode")
-////                return
-////            }
-////            let post = posts.filter{$0.userId == self.d_userId}
-////
-////            for postLoop in posts {
-////                let postEntity = PostListEntity(context: self.context)
-////                postEntity.id = Int64(postLoop.id)
-////                postEntity.userId = Int64(postLoop.userId)
-////                postEntity.title = postLoop.title
-////                postEntity.body = postLoop.body
-////            }
-////            print(post.count)
-////            do {
-////                try self.context.save()
-////                print("data saved in db")
-////            }
-////            catch {
-////                print("error")
-////            }
-////        })
-////        tasks.resume()
-//    }
     
     func fetchDataTodoPost() {
         switch taskEnum {
@@ -230,6 +198,7 @@ class UserDetailView: UIViewController {
                         
                     }
                     else {
+                        print("todo item : \(self.todoItem.count)")
                         DispatchQueue.main.async {
                             self.tpTableView.reloadData()
                         }
@@ -256,7 +225,7 @@ class UserDetailView: UIViewController {
                     }
                 }
                 
-                print(self.postItem.count)
+                print("post items : \(self.postItem.count)")
                 self.tpTableView.reloadData()
             }
             catch {
@@ -264,11 +233,7 @@ class UserDetailView: UIViewController {
             }
         }
     }
-
 }
-                                                    
-        
-       
 extension UserDetailView: UITableViewDelegate, UITableViewDataSource {
     
     

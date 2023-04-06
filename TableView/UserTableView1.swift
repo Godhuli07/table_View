@@ -9,7 +9,11 @@ import UIKit
 import CoreData
 import Foundation
 
-class UserTableView1: UIViewController {
+class UserTableView1: UIViewController, UserTappedDelegate {
+    func userTapped(id: Int) -> [UserListEntity] {
+        return fetchUsersWithId(id: id)
+    }
+    
         
     @IBOutlet weak var myTableView: UITableView!
     
@@ -27,9 +31,7 @@ class UserTableView1: UIViewController {
                     self.fetchUsers()
                 }
             }
-
         }
-                
     }
     
     func fetchUsers() {
@@ -44,13 +46,34 @@ class UserTableView1: UIViewController {
                 DispatchQueue.main.async {
                     self.myTableView.reloadData()
                 }
-                
             }
         }
         catch {
             print("error fetching")
         }
-//        fetchUsers()
+    }
+    
+    func fetchUsersWithId(id : Int)-> [UserListEntity] {
+        var items: [UserListEntity] = []
+        let request: NSFetchRequest<UserListEntity> = UserListEntity.fetchRequest()
+        request.predicate = NSPredicate(format: "id = %@", "\(id)")
+
+        let sortDescriptor = NSSortDescriptor(key: "id", ascending: true)
+          request.sortDescriptors = [sortDescriptor]
+        do {
+            items = try context.fetch(request)
+            if items.isEmpty {
+            }
+            else {
+                DispatchQueue.main.async {
+                    self.myTableView.reloadData()
+                }
+            }
+        }
+        catch {
+            print("error fetching")
+        }
+        return items
     }
     
     func fetchData(completion : @escaping((Bool,[UserListEntity])-> Void)) {
@@ -96,13 +119,10 @@ class UserTableView1: UIViewController {
 
                     }
                 }
-                //cList = try JSONDecoder().decode([UserList].self, from: data)
-                //self.userInfo = cList
-                //Saving data
                 try? self.context.save()
                 completion(true, parsedData)
 
-                print("data saved")
+                print("user data saved")
                 DispatchQueue.main.async {
                     self.myTableView.reloadData()
                 }
@@ -134,12 +154,8 @@ extension UserTableView1: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
           let detail: UserDetailView = self.storyboard?.instantiateViewController(identifier: "UserDetailView") as!
               UserDetailView
-        let user = items[indexPath.row]
-        detail.d_name = user.name!
-        detail.d_email = user.email!
-        detail.d_phone = user.phone!
-        detail.d_website = user.website!
-        detail.d_userId = user.id
+        detail.delegate = self
+        detail.d_userId = Int64(indexPath.row+1)
         self.navigationController?.pushViewController(detail, animated: true)
       }
 }

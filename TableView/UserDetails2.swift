@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import CoreData
+import Foundation
 
 class UserDetails2: UIViewController {
     
