@@ -24,6 +24,9 @@ class UserDetailView: UIViewController {
     @IBOutlet weak var detailsPhone: UILabel!
     @IBOutlet weak var detailsWebsite: UILabel!
     @IBOutlet weak var tpTableView: UITableView!
+    @IBOutlet weak var todoPostLoader: UIActivityIndicatorView!
+    
+    
     var delegate: UserTappedDelegate?
     var tList = [TodoList]()
     var pList = [PostList]()
@@ -43,17 +46,27 @@ class UserDetailView: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        todoPostLoader.startAnimating()
         self.user = self.delegate?.userTapped(id: Int(self.d_userId)) ?? []
         self.tpTableView.tableFooterView = UIView()
         DispatchQueue.main.async {
             self.fetchTodoApi { isSuccess, data in
                 if isSuccess {
                     self.fetchDataTodoPost()
+                    DispatchQueue.main.asyncAfter(deadline: .now()+1.5) {
+                        self.todoPostLoader.hidesWhenStopped = true
+                        self.todoPostLoader.stopAnimating()
+                    }
                 }
             }
             self.fetchPostApi { isSuccess, data in
                 if isSuccess {
                     self.fetchDataTodoPost()
+                    DispatchQueue.main.asyncAfter(deadline: .now()+1.5) {
+                        self.todoPostLoader.hidesWhenStopped = true
+                        self.todoPostLoader.stopAnimating()
+                    }
+
                 }
             }
         }

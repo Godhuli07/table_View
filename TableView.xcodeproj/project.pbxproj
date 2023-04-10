@@ -20,7 +20,6 @@
 		1DA27B5929AC8C8700ACA669 /* TodoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA27B5829AC8C8700ACA669 /* TodoList.swift */; };
 		1DA27B5D29AC8EC100ACA669 /* PostList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA27B5C29AC8EC100ACA669 /* PostList.swift */; };
 		1DA27B6029AC95E000ACA669 /* TodoListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA27B5F29AC95E000ACA669 /* TodoListCell.swift */; };
-		8D61142429AF344400A8FCF7 /* mySingletonClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D61142329AF344400A8FCF7 /* mySingletonClass.swift */; };
 		8D7CE05229C1F90E00476B5A /* TableView.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8D7CE05029C1F90E00476B5A /* TableView.xcdatamodeld */; };
 		8DB4B50529B22AE40001E774 /* UserDetails2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB4B50429B22AE40001E774 /* UserDetails2.swift */; };
 		8DF1F1AF29C33525005D08D8 /* TodoListEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF1F1A729C33525005D08D8 /* TodoListEntity+CoreDataClass.swift */; };
@@ -49,7 +48,6 @@
 		1DA27B5829AC8C8700ACA669 /* TodoList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoList.swift; sourceTree = "<group>"; };
 		1DA27B5C29AC8EC100ACA669 /* PostList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostList.swift; sourceTree = "<group>"; };
 		1DA27B5F29AC95E000ACA669 /* TodoListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListCell.swift; sourceTree = "<group>"; };
-		8D61142329AF344400A8FCF7 /* mySingletonClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mySingletonClass.swift; sourceTree = "<group>"; };
 		8D7CE05129C1F90E00476B5A /* TableView.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TableView.xcdatamodel; sourceTree = "<group>"; };
 		8DB4B50029B22AC30001E774 /* TableView-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TableView-Bridging-Header.h"; sourceTree = "<group>"; };
 		8DB4B50429B22AE40001E774 /* UserDetails2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetails2.swift; sourceTree = "<group>"; };
@@ -113,7 +111,6 @@
 				1D87744429A38D0B0077C1DF /* UserList.swift */,
 				1DA27B5829AC8C8700ACA669 /* TodoList.swift */,
 				1DA27B5C29AC8EC100ACA669 /* PostList.swift */,
-				8D61142329AF344400A8FCF7 /* mySingletonClass.swift */,
 				1D87742529A3432D0077C1DF /* Assets.xcassets */,
 				1D87742729A3432D0077C1DF /* LaunchScreen.storyboard */,
 				1D87742A29A3432D0077C1DF /* Info.plist */,
@@ -205,7 +202,6 @@
 				1D0F267F29A4979E005E7C81 /* TableViewCell.swift in Sources */,
 				1DA27B5929AC8C8700ACA669 /* TodoList.swift in Sources */,
 				1DA27B6029AC95E000ACA669 /* TodoListCell.swift in Sources */,
-				8D61142429AF344400A8FCF7 /* mySingletonClass.swift in Sources */,
 				8DB4B50529B22AE40001E774 /* UserDetails2.swift in Sources */,
 				8DF1F1B629C33525005D08D8 /* AddressEntity+CoreDataProperties.swift in Sources */,
 				8DF1F1AF29C33525005D08D8 /* TodoListEntity+CoreDataClass.swift in Sources */,

@@ -16,6 +16,7 @@ class UserTableView1: UIViewController, UserTappedDelegate {
     
         
     @IBOutlet weak var myTableView: UITableView!
+    @IBOutlet weak var userListLoader: UIActivityIndicatorView!
     
     var userInfo:[UserList] = []
     var items:[UserListEntity] = []
@@ -24,33 +25,45 @@ class UserTableView1: UIViewController, UserTappedDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        userListLoader.startAnimating()
         self.myTableView.tableFooterView = UIView()
         DispatchQueue.main.async {
             self.fetchData { isSuccess, data in
                 if isSuccess{
-                    self.fetchUsers()
+                    self.fetchUsers { isSuccess in
+                        if isSuccess {
+                            DispatchQueue.main.asyncAfter(deadline: .now()+1.5) {
+                                self.userListLoader.hidesWhenStopped = true
+                                self.userListLoader.stopAnimating()
+                            }
+                        }
+                    }
                 }
             }
         }
     }
     
-    func fetchUsers() {
+    func fetchUsers(completion : @escaping((Bool) -> Void)) {
+        
         let request: NSFetchRequest<UserListEntity> = UserListEntity.fetchRequest()
         let sortDescriptor = NSSortDescriptor(key: "id", ascending: true)
           request.sortDescriptors = [sortDescriptor]
         do {
-            self.items = try context.fetch(request)
+            self.items = try!context.fetch(request)
             if items.isEmpty {
             }
             else {
+                
                 DispatchQueue.main.async {
                     self.myTableView.reloadData()
+                    
                 }
             }
         }
-        catch {
-            print("error fetching")
-        }
+        completion(true)
+//        catch {
+//            print("error fetching")
+//        }
     }
     
     func fetchUsersWithId(id : Int)-> [UserListEntity] {
